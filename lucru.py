@@ -46,7 +46,13 @@ va returna o listă aplatizată sau altfel spus o listă cu elementele fiecărei
 """
 
 # CODUL TĂU VINE MAI JOS:
+def task_4(matrice):
+    return [ element for  sublista in matrice for element in sublista  ]
 
+
+matrice_exemplu= [[1, 2], [3, 4], [5, 6]]
+rezultat=task_4(matrice_exemplu)
+print(rezultat)
 # CODUL TĂU VINE MAI SUS:
 
 """
