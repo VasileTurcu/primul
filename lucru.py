@@ -32,7 +32,12 @@ Utilizați list comprehension în proces.
 """
 
 # CODUL TĂU VINE MAI JOS:
+def task_3():
+    
+ return [numar for numar  in range(1,11) if numar % 2 != 0]
 
+resultat= task_3()
+print(resultat)
 # CODUL TĂU VINE MAI SUS:
 
 """
