@@ -7,7 +7,7 @@ from math import factorial
 # CODUL TĂU VINE MAI JOS:
 def task_1():
     
- return [numar  for numar in range(1,10)]
+ return [numar  for numar in range(1,11)]
 
 resultat= task_1()
 print(resultat)
@@ -19,8 +19,12 @@ Utilizați list comprehension în proces
 """
 
 # CODUL TĂU VINE MAI JOS:
+def task_2():
+    
+ return [numar **2 for numar in range(1,11)]
 
-# CODUL TĂU VINE MAI SUS:
+resultat= task_2()
+print(resultat)
 
 """
 Task: Creați o funcție cu numele "task_3" care va returna o listă cu numerele impare de la 1 la 10.
