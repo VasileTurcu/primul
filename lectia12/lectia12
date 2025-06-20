@@ -22,9 +22,11 @@ print(aria_dreptunghi(7,9))
 # Exercițiul 2: Creați o funcție de salut personalizat
 # Funcția să primească nume (obligatoriu) și titlu (opțional, default "Domnule/Doamna")
 # Să returneze un mesaj de salut
-def salut_personalizat():
+def salut_personalizat(nume,titlu="Domnule/Doamna"):
     # CODUL TĂU AICI
-    pass
+  return {nume,titlu}
+print(salut_personalizat("Ion"))    
+
 
 # Testare:
 # print(salut_personalizat("Ion"))                    # "Bună ziua, Domnule/Doamna Ion!"
