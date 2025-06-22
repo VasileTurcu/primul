@@ -62,7 +62,13 @@ Exemplu: Pentru n=10 rezultatul returnat va fi ["impar", "par", "impar", "par", 
 """
 
 # CODUL TĂU VINE MAI JOS:
-
+def task_5(n):
+    # List comprehension pentru aplatizarea matricei
+    
+    return ["par" if numarul % 2==0 else "impar" for numarul in range(1,n+1)  ]
+n=10
+rezultat=task_5(n)
+print(f'lista aplatizata va fi:{rezultat}')
 # CODUL TĂU VINE MAI SUS:
 
 """
