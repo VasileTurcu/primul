@@ -185,23 +185,39 @@ Exemplu: Pentru numerele 3 și 4 rezultatul va fi (7, 12)
 """
 
 # CODUL TĂU VINE MAI JOS:
-# print("Ex 13:")
+def task_13(a,b):
+ suma=a+b
+ produsul = a*b
+ 
+ return suma,produsul
 
-# a = int(input("Dati a: "))
-# b = int(input("Dati b: "))
-# print(task_13(a, b))
+
+print("Ex 13:")
+
+a = int(input("Dati a: "))
+b = int(input("Dati b: "))
+print(task_13(a,b))
 # CODUL TĂU VINE MAI SUS:
 
 """
-Task: Creați o funcție cu numele "task_14" care acceptă un număr ce reprezintă vârsta unei persoane și returnează textul "minor" dacă vârsta este sub 18 ani, "adult" dacă vârsta este între 18 și 65 ani și "senior" dacă vârsta este peste 65 de ani.
+Task: Creați o funcție cu numele "task_14" care acceptă un număr ce reprezintă vârsta unei persoane 
+și returnează textul "minor" dacă vârsta este sub 18 ani, "adult" dacă vârsta este între 18 și 65 ani și "senior"
+ dacă vârsta este peste 65 de ani.
 Exemplu: Pentru vârsta 32 rezultatul va fi "adult"
 """
 
 # CODUL TĂU VINE MAI JOS:
-# print("Ex 14:")
+def task_14(n):
+ if n < 18:
+  return 'minor'
+ elif n > 18 and n<65:
+  return 'adult'
+ else:
+  return 'senior'
+print("Ex 14:")
 
-# varsta = int(input("Dati varsta: "))
-# print(task_14(varsta))
+varsta = int(input("Dati varsta: "))
+print(task_14(n))
 # CODUL TĂU VINE MAI SUS:
 
 """
@@ -210,22 +226,30 @@ Exemplu: Pentru string-ul "ana" rezultatul va fi `True`, iar pentru string-ul "t
 """
 
 # CODUL TĂU VINE MAI JOS:
-# print("Ex 15:")
+def task_15(str):
+    if str== str[::-1]:
+        return 'True'
+    else:
+        return 'False'
+print("Ex 15:")
 
-# str = input("Dati un string: ")
-# print(task_15(str))
+str = input("Dati un string: ")
+print(task_15(str))
 # CODUL TĂU VINE MAI SUS:
 
 """
 Task: Creați o funcție cu numele "task_16" care acceptă un string și returnează același string cu literele inversate.
 Exemplu: Pentru string-ul "test" rezultatul va fi "tset"
+
 """
 
 # CODUL TĂU VINE MAI JOS:
-# print("Ex 16:")
+def task_16(str):
+   return str[::-1]
+print("Ex 16:")
 
-# str = input("Dati un string: ")
-# print(task_16(str))
+str = input("Dati un string: ")
+print(task_16(str))
 
 # CODUL TĂU VINE MAI SUS:
 
@@ -233,12 +257,13 @@ Exemplu: Pentru string-ul "test" rezultatul va fi "tset"
 Task: Creați o funcție cu numele "task_17" care acceptă un string și returnează numărul de cuvinte din string.
 Exemplu: Pentru string-ul "Hello, World!" rezultatul va fi 2
 """
-
+def task_17(str):
+   return len(str)
 # CODUL TĂU VINE MAI JOS:
-# print("Ex 17:")
+print("Ex 17:")
 
-# str = input("Dati un string: ")
-# print(task_17(str))
+str = input("Dati un string: ")
+print(task_17(str))
 # CODUL TĂU VINE MAI SUS:
 
 """
