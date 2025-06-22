@@ -108,7 +108,9 @@ Exemplu: Pentru lista [1, 2, 3, 4, 5] rezultatul va fi 3.0
 """
 
 # CODUL TĂU VINE MAI JOS:
-
+def task_8(n):
+   return [sum(n)/len(n)]
+print(task_8([1,2,3,4,5,6]))
 # CODUL TĂU VINE MAI SUS:
 
 """
