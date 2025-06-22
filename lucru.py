@@ -68,7 +68,7 @@ def task_5(n):
     return ["par" if numarul % 2==0 else "impar" for numarul in range(1,n+1)  ]
 n=10
 rezultat=task_5(n)
-print(f'lista aplatizata va fi:{rezultat}')
+print(f'lista  va fi:{rezultat}')
 # CODUL TĂU VINE MAI SUS:
 
 """
@@ -78,10 +78,13 @@ Exemplu: Pentru n=5 rezultatul returnat va fi {1: 1, 2: 8, 3: 27, 4: 64, 5: 125}
 """
 
 # CODUL TĂU VINE MAI JOS:
-# print("Ex 6:")
+def task_6(n):
+    
+    return {i:i**3 for i in range(1,n+1)  }
+print("Ex 6:")
 
-# n = int(input("Introduceti n: "))
-# print(task_6(n))
+n = int(input("Introduceti n: "))
+print(task_6(n))
 # CODUL TĂU VINE MAI SUS:
 
 """
