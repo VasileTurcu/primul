@@ -120,7 +120,7 @@ Exemplu: Pentru numărul 4 rezultatul va fi `True`, iar pentru numărul 5 rezult
 
 # CODUL TĂU VINE MAI JOS:
 def task_9(n):
- return  [ "True" if i % 2==0 else 'False' for i in n ]
+ return  [ "True" if i % 2==0 else 'False' for i in range(1, n + 1) ]
 # print("Ex 9:")
 
 n = int(input("Dati un numar: "))
@@ -267,14 +267,18 @@ print(task_17(str))
 # CODUL TĂU VINE MAI SUS:
 
 """
-Task: Creați o funcție cu numele "task_18" care acceptă un număr ce reprezintă temperatura în grade Celsius și returnează temperatura în grade Fahrenheit.
+Task: Creați o funcție cu numele "task_18" care acceptă un număr 
+ce reprezintă temperatura în grade Celsius și returnează temperatura în grade Fahrenheit.
 Exemplu: Pentru temperatura 0 rezultatul va fi 32.0
 """
 
 # CODUL TĂU VINE MAI JOS:
-# print("Ex 18:")
+def task_18(temp):
+   far= temp * 9/5 +32 
+   return far
+print("Ex 18:")
 
-# temp = float(input("Dati temperatura in C: "))
+temp = float(input("Dati temperatura in C: "))
 # print(task_18(temp))
 # CODUL TĂU VINE MAI SUS:
 
@@ -284,10 +288,18 @@ Exemplu: Pentru numărul 7 rezultatul va fi `True`, iar pentru numărul 10 rezul
 """
 
 # CODUL TĂU VINE MAI JOS:
-# print("Ex 19:")
+def task_19(n):
+    """Returnează True dacă n este număr prim, altfel False."""
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1): 
+        if n % i == 0:
+            return False
+    return True
+print("Ex 19:")
 
-# nr = int(input("Dati un numar: "))
-# print(task_19(nr))
+nr = int(input("Dati un numar: "))
+print(task_19(nr))
 # CODUL TĂU VINE MAI SUS:
 
 """
@@ -297,10 +309,17 @@ Exemplu: Pentru numărul 28 rezultatul va fi `True`, iar pentru numărul 10 rezu
 """
 
 # CODUL TĂU VINE MAI JOS:
-# print("Ex 20:")
+def task_20(n):
+    """Returnează True dacă n este număr perfect, altfel False.
+       Un număr perfect este egal cu suma divizorilor săi proprii."""
+    if n <= 1:
+        return False
+    suma_divizori = sum(i for i in range(1, n // 2 + 1) if n % i == 0)
+    return suma_divizori == n
+print("Ex 20:")
 
-# nr = int(input("Dati un numar: "))
-# print(task_20(nr))
+nr = int(input("Dati un numar: "))
+print(task_20(n))
 # CODUL TĂU VINE MAI SUS:
 
 """
@@ -310,10 +329,17 @@ Exemplu: Pentru numărul 153 rezultatul va fi `True`, iar pentru numărul 10 rez
 """
 
 # CODUL TĂU VINE MAI JOS:
-# print("Ex 21:")
+def task_21(n):
+    """Returnează True dacă n este număr Armstrong, altfel False.
+       Un număr Armstrong este egal cu suma cifrelor sale ridicate la puterea numărului de cifre."""
+    cifre = str(n)
+    putere = len(cifre)
+    suma = sum(int(c) ** putere for c in cifre)
+    return suma == n
+print("Ex 21:")
 
-# nr = int(input("Dati un numar: "))
-# print(task_21(nr))
+n = int(input("Dati un numar: "))
+print(task_21(n))
 # CODUL TĂU VINE MAI SUS:
 
 """
@@ -323,10 +349,17 @@ Exemplu: Pentru numărul 18 rezultatul va fi `True`, iar pentru numărul 14 rezu
 """
 
 # CODUL TĂU VINE MAI JOS:
-# print("Ex 22:")
+def task_22(n):
+    """Returnează True dacă n este număr Harshad, altfel False.
+       Un număr Harshad este divizibil cu suma cifrelor sale."""
+    if n == 0:
+        return False
+    suma_cifre = sum(int(c) for c in str(n))
+    return n % suma_cifre == 0
+print("Ex 22:")
 
-# nr = int(input("Dati un numar: "))
-# print(task_22(nr))
+n = int(input("Dati un numar: "))
+print(task_22(n))
 # CODUL TĂU VINE MAI SUS:
 
 """
@@ -335,10 +368,18 @@ Exemplu: Pentru numărul 5 rezultatul va fi [0, 1, 1, 2, 3]
 """
 
 # CODUL TĂU VINE MAI JOS:
-# print("Ex 23:")
+def task_23(n):
+    """Returnează o listă cu primele n numere din seria Fibonacci."""
+    fib = []
+    a, b = 0, 1
+    for _ in range(n):
+        fib.append(a)
+        a, b = b, a + b
+    return fib
+print("Ex 23:")
 
-# nr = int(input("Dati un numar: "))
-# print(task_23(nr))
+n = int(input("Dati un numar: "))
+print(task_23(n))
 # CODUL TĂU VINE MAI SUS:
 
 """
@@ -347,6 +388,9 @@ Exemplu: Pentru numărul 10 rezultatul va fi [1, 2, 5, 10]
 """
 
 # CODUL TĂU VINE MAI JOS:
-
+def task_24(n):
+    """Returnează o listă cu toți divizorii numărului n."""
+    return [i for i in range(1, n + 1) if n % i == 0]
+print(task_24(n))
 
 # CODUL TĂU VINE MAI SUS:
