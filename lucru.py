@@ -119,10 +119,12 @@ Exemplu: Pentru numărul 4 rezultatul va fi `True`, iar pentru numărul 5 rezult
 """
 
 # CODUL TĂU VINE MAI JOS:
+def task_9(n):
+ return  [ "True" if i % 2==0 else 'False' for i in n ]
 # print("Ex 9:")
 
-# n = int(input("Dati un numar: "))
-# print(task_9(n))
+n = int(input("Dati un numar: "))
+print(task_9(n))
 # CODUL TĂU VINE MAI SUS:
 
 """
