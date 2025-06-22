@@ -94,10 +94,12 @@ Exemplu: Pentru n=50 rezultatul returnat va fi {3, 6, 9, 12, 15, 18, 21, 24, 27,
 """
 
 # CODUL TĂU VINE MAI JOS:
+def task_7(n):
+   return [i for i in range(1,n + 1) if i % 3 ==0]
 # print("Ex 7:")
 
-# n = int(input("Introduceti n: "))
-# print(task_7(n))
+n = int(input("Introduceti n: "))
+print(task_7(n))
 # CODUL TĂU VINE MAI SUS:
 
 """
