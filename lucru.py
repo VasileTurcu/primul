@@ -154,7 +154,9 @@ Exemplu: Pentru lista [10, 20, 30, 40, 50] rezultatul va fi 50
 """
 
 # CODUL TĂU VINE MAI JOS:
-
+def task_11(*n):
+    return max(n) 
+print(task_11(10,20,30,40,50,60,70))
 # CODUL TĂU VINE MAI SUS:
 
 """
@@ -163,10 +165,16 @@ Exemplu: Pentru numărul 5 rezultatul va fi 120
 """
 
 # CODUL TĂU VINE MAI JOS:
-# print("Ex 12:")
+def task_12(n):
+    factorial= 1
+    for i in range(2 , n + 1):
+        factorial *= i
+    return factorial
 
-# nr = int(input("Al cui factorial doriti sa il calculati?: "))
-# print(task_12(nr))
+print("Ex 12:")
+
+n = int(input("Al cui factorial doriti sa il calculati?: "))
+print(task_12(n))
 
 
 # CODUL TĂU VINE MAI SUS:
