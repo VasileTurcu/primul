@@ -32,7 +32,12 @@ Utilizați list comprehension în proces.
 """
 
 # CODUL TĂU VINE MAI JOS:
+def task_3():
+    
+ return [numar for numar  in range(1,11) if numar % 2 != 0]
 
+resultat= task_3()
+print(resultat)
 # CODUL TĂU VINE MAI SUS:
 
 """
@@ -41,7 +46,13 @@ va returna o listă aplatizată sau altfel spus o listă cu elementele fiecărei
 """
 
 # CODUL TĂU VINE MAI JOS:
+def task_4(matrice):
+    return [ element for  sublista in matrice for element in sublista  ]
 
+
+matrice_exemplu= [[1, 2], [3, 4], [5, 6]]
+rezultat=task_4(matrice_exemplu)
+print(rezultat)
 # CODUL TĂU VINE MAI SUS:
 
 """
@@ -51,7 +62,13 @@ Exemplu: Pentru n=10 rezultatul returnat va fi ["impar", "par", "impar", "par", 
 """
 
 # CODUL TĂU VINE MAI JOS:
-
+def task_5(n):
+    # List comprehension pentru aplatizarea matricei
+    
+    return ["par" if numarul % 2==0 else "impar" for numarul in range(1,n+1)  ]
+n=10
+rezultat=task_5(n)
+print(f'lista  va fi:{rezultat}')
 # CODUL TĂU VINE MAI SUS:
 
 """
@@ -61,10 +78,13 @@ Exemplu: Pentru n=5 rezultatul returnat va fi {1: 1, 2: 8, 3: 27, 4: 64, 5: 125}
 """
 
 # CODUL TĂU VINE MAI JOS:
-# print("Ex 6:")
+def task_6(n):
+    
+    return {i:i**3 for i in range(1,n+1)  }
+print("Ex 6:")
 
-# n = int(input("Introduceti n: "))
-# print(task_6(n))
+n = int(input("Introduceti n: "))
+print(task_6(n))
 # CODUL TĂU VINE MAI SUS:
 
 """
@@ -74,10 +94,12 @@ Exemplu: Pentru n=50 rezultatul returnat va fi {3, 6, 9, 12, 15, 18, 21, 24, 27,
 """
 
 # CODUL TĂU VINE MAI JOS:
+def task_7(n):
+   return [i for i in range(1,n + 1) if i % 3 ==0]
 # print("Ex 7:")
 
-# n = int(input("Introduceti n: "))
-# print(task_7(n))
+n = int(input("Introduceti n: "))
+print(task_7(n))
 # CODUL TĂU VINE MAI SUS:
 
 """
@@ -86,7 +108,9 @@ Exemplu: Pentru lista [1, 2, 3, 4, 5] rezultatul va fi 3.0
 """
 
 # CODUL TĂU VINE MAI JOS:
-
+def task_8(n):
+   return [sum(n)/len(n)]
+print(task_8([1,2,3,4,5,6]))
 # CODUL TĂU VINE MAI SUS:
 
 """
@@ -95,10 +119,12 @@ Exemplu: Pentru numărul 4 rezultatul va fi `True`, iar pentru numărul 5 rezult
 """
 
 # CODUL TĂU VINE MAI JOS:
+def task_9(n):
+ return  [ "True" if i % 2==0 else 'False' for i in range(1, n + 1) ]
 # print("Ex 9:")
 
-# n = int(input("Dati un numar: "))
-# print(task_9(n))
+n = int(input("Dati un numar: "))
+print(task_9(n))
 # CODUL TĂU VINE MAI SUS:
 
 """
@@ -108,12 +134,18 @@ Exemplu: Pentru numele "Ana", vârsta 32 și orașul "București" rezultatul va 
 """
 
 # CODUL TĂU VINE MAI JOS:
+def task_10(nume,varsta,oras='optional'):
+    
+    
+    return  f'Numele:{nume}, Varsta:{varsta},Oras:{oras}'
+
+
 # print("Ex 10:")
 
-# nume = input("Dati un nume: ")
-# varsta = int(input("Dati varsta: "))
-# oras = input("Dati orasul (optional): ")
-# print(task_10(nume, varsta, oras))
+nume = input("Dati un nume: ")
+varsta = int(input("Dati varsta: "))
+oras = input("Dati orasul (optional): ")
+print(task_10(nume, varsta, oras))
 # CODUL TĂU VINE MAI SUS:
 
 """
@@ -122,7 +154,9 @@ Exemplu: Pentru lista [10, 20, 30, 40, 50] rezultatul va fi 50
 """
 
 # CODUL TĂU VINE MAI JOS:
-
+def task_11(*n):
+    return max(n) 
+print(task_11(10,20,30,40,50,60,70))
 # CODUL TĂU VINE MAI SUS:
 
 """
@@ -131,10 +165,16 @@ Exemplu: Pentru numărul 5 rezultatul va fi 120
 """
 
 # CODUL TĂU VINE MAI JOS:
-# print("Ex 12:")
+def task_12(n):
+    factorial= 1
+    for i in range(2 , n + 1):
+        factorial *= i
+    return factorial
 
-# nr = int(input("Al cui factorial doriti sa il calculati?: "))
-# print(task_12(nr))
+print("Ex 12:")
+
+n = int(input("Al cui factorial doriti sa il calculati?: "))
+print(task_12(n))
 
 
 # CODUL TĂU VINE MAI SUS:
@@ -145,23 +185,39 @@ Exemplu: Pentru numerele 3 și 4 rezultatul va fi (7, 12)
 """
 
 # CODUL TĂU VINE MAI JOS:
-# print("Ex 13:")
+def task_13(a,b):
+ suma=a+b
+ produsul = a*b
+ 
+ return suma,produsul
 
-# a = int(input("Dati a: "))
-# b = int(input("Dati b: "))
-# print(task_13(a, b))
+
+print("Ex 13:")
+
+a = int(input("Dati a: "))
+b = int(input("Dati b: "))
+print(task_13(a,b))
 # CODUL TĂU VINE MAI SUS:
 
 """
-Task: Creați o funcție cu numele "task_14" care acceptă un număr ce reprezintă vârsta unei persoane și returnează textul "minor" dacă vârsta este sub 18 ani, "adult" dacă vârsta este între 18 și 65 ani și "senior" dacă vârsta este peste 65 de ani.
+Task: Creați o funcție cu numele "task_14" care acceptă un număr ce reprezintă vârsta unei persoane 
+și returnează textul "minor" dacă vârsta este sub 18 ani, "adult" dacă vârsta este între 18 și 65 ani și "senior"
+ dacă vârsta este peste 65 de ani.
 Exemplu: Pentru vârsta 32 rezultatul va fi "adult"
 """
 
 # CODUL TĂU VINE MAI JOS:
-# print("Ex 14:")
+def task_14(n):
+ if n < 18:
+  return 'minor'
+ elif n > 18 and n<65:
+  return 'adult'
+ else:
+  return 'senior'
+print("Ex 14:")
 
-# varsta = int(input("Dati varsta: "))
-# print(task_14(varsta))
+varsta = int(input("Dati varsta: "))
+print(task_14(n))
 # CODUL TĂU VINE MAI SUS:
 
 """
@@ -170,22 +226,30 @@ Exemplu: Pentru string-ul "ana" rezultatul va fi `True`, iar pentru string-ul "t
 """
 
 # CODUL TĂU VINE MAI JOS:
-# print("Ex 15:")
+def task_15(str):
+    if str== str[::-1]:
+        return 'True'
+    else:
+        return 'False'
+print("Ex 15:")
 
-# str = input("Dati un string: ")
-# print(task_15(str))
+str = input("Dati un string: ")
+print(task_15(str))
 # CODUL TĂU VINE MAI SUS:
 
 """
 Task: Creați o funcție cu numele "task_16" care acceptă un string și returnează același string cu literele inversate.
 Exemplu: Pentru string-ul "test" rezultatul va fi "tset"
+
 """
 
 # CODUL TĂU VINE MAI JOS:
-# print("Ex 16:")
+def task_16(str):
+   return str[::-1]
+print("Ex 16:")
 
-# str = input("Dati un string: ")
-# print(task_16(str))
+str = input("Dati un string: ")
+print(task_16(str))
 
 # CODUL TĂU VINE MAI SUS:
 
@@ -193,23 +257,28 @@ Exemplu: Pentru string-ul "test" rezultatul va fi "tset"
 Task: Creați o funcție cu numele "task_17" care acceptă un string și returnează numărul de cuvinte din string.
 Exemplu: Pentru string-ul "Hello, World!" rezultatul va fi 2
 """
-
+def task_17(str):
+   return len(str)
 # CODUL TĂU VINE MAI JOS:
-# print("Ex 17:")
+print("Ex 17:")
 
-# str = input("Dati un string: ")
-# print(task_17(str))
+str = input("Dati un string: ")
+print(task_17(str))
 # CODUL TĂU VINE MAI SUS:
 
 """
-Task: Creați o funcție cu numele "task_18" care acceptă un număr ce reprezintă temperatura în grade Celsius și returnează temperatura în grade Fahrenheit.
+Task: Creați o funcție cu numele "task_18" care acceptă un număr 
+ce reprezintă temperatura în grade Celsius și returnează temperatura în grade Fahrenheit.
 Exemplu: Pentru temperatura 0 rezultatul va fi 32.0
 """
 
 # CODUL TĂU VINE MAI JOS:
-# print("Ex 18:")
+def task_18(temp):
+   far= temp * 9/5 +32 
+   return far
+print("Ex 18:")
 
-# temp = float(input("Dati temperatura in C: "))
+temp = float(input("Dati temperatura in C: "))
 # print(task_18(temp))
 # CODUL TĂU VINE MAI SUS:
 
@@ -219,10 +288,18 @@ Exemplu: Pentru numărul 7 rezultatul va fi `True`, iar pentru numărul 10 rezul
 """
 
 # CODUL TĂU VINE MAI JOS:
-# print("Ex 19:")
+def task_19(n):
+    """Returnează True dacă n este număr prim, altfel False."""
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1): 
+        if n % i == 0:
+            return False
+    return True
+print("Ex 19:")
 
-# nr = int(input("Dati un numar: "))
-# print(task_19(nr))
+nr = int(input("Dati un numar: "))
+print(task_19(nr))
 # CODUL TĂU VINE MAI SUS:
 
 """
@@ -232,10 +309,17 @@ Exemplu: Pentru numărul 28 rezultatul va fi `True`, iar pentru numărul 10 rezu
 """
 
 # CODUL TĂU VINE MAI JOS:
-# print("Ex 20:")
+def task_20(n):
+    """Returnează True dacă n este număr perfect, altfel False.
+       Un număr perfect este egal cu suma divizorilor săi proprii."""
+    if n <= 1:
+        return False
+    suma_divizori = sum(i for i in range(1, n // 2 + 1) if n % i == 0)
+    return suma_divizori == n
+print("Ex 20:")
 
-# nr = int(input("Dati un numar: "))
-# print(task_20(nr))
+nr = int(input("Dati un numar: "))
+print(task_20(n))
 # CODUL TĂU VINE MAI SUS:
 
 """
@@ -245,10 +329,17 @@ Exemplu: Pentru numărul 153 rezultatul va fi `True`, iar pentru numărul 10 rez
 """
 
 # CODUL TĂU VINE MAI JOS:
-# print("Ex 21:")
+def task_21(n):
+    """Returnează True dacă n este număr Armstrong, altfel False.
+       Un număr Armstrong este egal cu suma cifrelor sale ridicate la puterea numărului de cifre."""
+    cifre = str(n)
+    putere = len(cifre)
+    suma = sum(int(c) ** putere for c in cifre)
+    return suma == n
+print("Ex 21:")
 
-# nr = int(input("Dati un numar: "))
-# print(task_21(nr))
+n = int(input("Dati un numar: "))
+print(task_21(n))
 # CODUL TĂU VINE MAI SUS:
 
 """
@@ -258,10 +349,17 @@ Exemplu: Pentru numărul 18 rezultatul va fi `True`, iar pentru numărul 14 rezu
 """
 
 # CODUL TĂU VINE MAI JOS:
-# print("Ex 22:")
+def task_22(n):
+    """Returnează True dacă n este număr Harshad, altfel False.
+       Un număr Harshad este divizibil cu suma cifrelor sale."""
+    if n == 0:
+        return False
+    suma_cifre = sum(int(c) for c in str(n))
+    return n % suma_cifre == 0
+print("Ex 22:")
 
-# nr = int(input("Dati un numar: "))
-# print(task_22(nr))
+n = int(input("Dati un numar: "))
+print(task_22(n))
 # CODUL TĂU VINE MAI SUS:
 
 """
@@ -270,10 +368,18 @@ Exemplu: Pentru numărul 5 rezultatul va fi [0, 1, 1, 2, 3]
 """
 
 # CODUL TĂU VINE MAI JOS:
-# print("Ex 23:")
+def task_23(n):
+    """Returnează o listă cu primele n numere din seria Fibonacci."""
+    fib = []
+    a, b = 0, 1
+    for _ in range(n):
+        fib.append(a)
+        a, b = b, a + b
+    return fib
+print("Ex 23:")
 
-# nr = int(input("Dati un numar: "))
-# print(task_23(nr))
+n = int(input("Dati un numar: "))
+print(task_23(n))
 # CODUL TĂU VINE MAI SUS:
 
 """
@@ -282,6 +388,9 @@ Exemplu: Pentru numărul 10 rezultatul va fi [1, 2, 5, 10]
 """
 
 # CODUL TĂU VINE MAI JOS:
-
+def task_24(n):
+    """Returnează o listă cu toți divizorii numărului n."""
+    return [i for i in range(1, n + 1) if n % i == 0]
+print(task_24(n))
 
 # CODUL TĂU VINE MAI SUS:
