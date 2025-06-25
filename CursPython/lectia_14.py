@@ -68,7 +68,10 @@ Exemplu: task_5([0, 20, 30]) -> [32.0, 68.0, 86.0]
 """
 
 # CODUL TĂU VINE MAI JOS:
+def task_5 (lista_numere):
+    return list(map(lambda x: x * 9/5 + 32,lista_numere)) 
 
+print(task_5([0, 20, 30]))
 # CODUL TĂU VINE MAI SUS:
 
 """
@@ -78,7 +81,10 @@ Exemplu: task_6([1, 2, 3, 4, 5, 6]) -> [2, 4, 6]
 """
 
 # CODUL TĂU VINE MAI JOS:
+def task_6 (lista_numere):
+    return list(filter(lambda x: x %2 ==0,lista_numere)) 
 
+print(task_6([1, 2, 3, 4, 5, 6]))
 # CODUL TĂU VINE MAI SUS:
 
 """
@@ -89,7 +95,10 @@ Exemplu: task_7([{"nume": "Ana", "varsta": 25}, {"nume": "Ion", "varsta": 20}]) 
 """
 
 # CODUL TĂU VINE MAI JOS:
+def task_7 (elevi):
+    return list(sorted(elevi,key=lambda elevi:elevi['varsta'] )) 
 
+print (task_7([{"nume": "Ana", "varsta": 25}, {"nume": "Ion", "varsta": 20}]))
 # CODUL TĂU VINE MAI SUS:
 
 """
@@ -101,7 +110,13 @@ Exemplu: saluta = task_8("Bună ziua")
 """
 
 # CODUL TĂU VINE MAI JOS:
+def task_8 (Defaul='Salut' ):
+    def saluta_nume(nume):
+     return f'{Defaul},{nume}'
+    return saluta_nume  
 
+defaul = task_8('Buna ziua')
+print(defaul("Ana!"))
 # CODUL TĂU VINE MAI SUS:
 
 """
