@@ -285,7 +285,22 @@ Testați pe o funcție care calculează media a două numere.
 """
 
 # CODUL TĂU VINE MAI JOS:
-
+def task_12(func):
+    def wrapper(*args, **kwargs):
+      
+      for arg in args:
+         if not isinstance(arg,(int,float)) or arg <=0:
+            return None
+      return func(*args , **kwargs)
+    return wrapper
+         
+@task_12
+def testarea(a,b):
+    return (a+b) / 2
+print(testarea(7,20))
+print(testarea(5,5))
+print(testarea(-2,-8))
+print(testarea(3.4,5.8))
 # CODUL TĂU VINE MAI SUS:
 
 """
@@ -297,7 +312,17 @@ Exemplu: task_13(123) -> 6 (1+2+3)
 """
 
 # CODUL TĂU VINE MAI JOS:
+def task_13(numb):
+    if numb == 0:
+        return 0
+        
+    else:
+       return numb % 10 + task_13(numb//10)
 
+
+print(task_13(123))
+print(task_13(456))
+print(task_13(7))
 # CODUL TĂU VINE MAI SUS:
 
 """
