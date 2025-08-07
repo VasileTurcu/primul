@@ -92,7 +92,7 @@ def main():
     print("📊 Matplotlib Demo")
     print("=" * 20)
     
-    # TODO: Apelează toate funcțiile
+    # TODO: Apelează toate funcțiile rgreger
     
     print("Creez grafic cu linii...")
     create_line_plot()

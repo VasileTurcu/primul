@@ -1,81 +1,112 @@
-# START TASK - Lecția 5.3 Funcții Lambda și Closures
-# Timp estimat: 20 minute
-# Branch: start-task-lesson-5-3
+import matplotlib.pyplot as plt
+import numpy as np
 
-# Exercițiul 1: Creați o funcție lambda care adună două numere
-adunare = None  # ÎNLOCUIEȘTE None cu lambda function
-adunare = lambda x, y: x + y
+def create_line_plot():
+    """Creează un grafic cu linii"""
+    
+    
+x =np.array ([1, 2, 3, 4, 5])
+y = np.array([2, 4, 6, 8, 10])
+
+plt.plot(x,y,color= 'blue',marker='o',linewidth=2,markersize=8)
+plt.title('Grafic cu Linii',fontsize=16,fontweight='bold')
+plt.xlabel('Axa x',fontsize=12) 
+plt.ylabel('Axa Y',fontsize=12)
+plt.grid(True)
+plt.show()
+plt.savefig(dpi=300,bbox_inches='tight' )
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+
+def create_bar_plot():
+    """Creează un grafic cu bare"""
+    
+    
+categories = ['A', 'B', 'C', 'D']
+values = [15, 25, 30, 20]
+plt.figure(figsize=(8, 6))
+plt.bar(categories,values,color=['red', 'green', 'blue', 'orange'],alpha=0.7)
+plt.title('Grafic cu Bare')
+plt.xlabel('Categorii')
+plt.ylabel('Valori')
+plt.grid(True, axis='y',alpha=0.3 )
+
+plt.show()
+plt.savefig(dpi=300,bbox_inches='tight' )
     
 
-print(adunare(5,3))
-print(adunare(10,2))
-# Testare:
-# print(adunare(5, 3))    # Ar trebui să afișeze 8
-# print(adunare(10, 2))   # Ar trebui să afișeze 12
+    
+    
+    
+import matplotlib.pyplot as plt
+import numpy as np
 
 
-# Exercițiul 2: Creați o funcție lambda care verifică dacă un număr este par
-este_par = None  # ÎNLOCUIEȘTE None cu lambda function
+def create_scatter_plot():
+    """Creează un grafic cu puncte"""
+    
+    # Date aleatorii
+x = np.random.randn(50)
+y = np.random.randn(50)
+    
+plt.figure(figsize=(8, 6))
+plt.scatter(x,y,c="purple",alpha=0.6,s=100)
+plt.title('Grafic cu Puncte')
+plt.xlabel('Axa X')
+plt.ylabel('Axa Y')
+plt.grid(alpha=0.3 )
+plt.show()
+plt.savefig(dpi=300,bbox_inches='tight' )
 
-este_par=lambda x:x % 2==0
-print(este_par(5)) 
-print(este_par(4))      # Ar trebui să afișeze True
-print(este_par(5))      # Ar trebui să afișeze False
+
+def create_subplot():
+    """Creează subplot cu toate graficele împreună"""
+fig, axes = plt.subplots(2, 2, figsize=(12, 10),)
+axes[0, 0].plot([1, 2, 3, 4], [1, 4, 2, 3],'bo-')
+axes[0, 0].set_title('Linii') 
+axes[0, 0].grid(True)
+
+axes[0, 1].bar(['X', 'Y', 'Z'], [10, 20, 15],color="green") 
+    
+axes[0, 1].set_title('Bare') 
+axes[0, 1].grid(True)
+
+axes[1, 0].scatter([1, 2, 3, 4], [2, 3, 1, 4],color='red',s=100)
+axes[1, 0].set_title('Puncte')
+axes[1, 0].grid(True)
 
 
-# Exercițiul 3: Folosiți lambda cu filter pentru a găsi numerele mari
-# Filtrați numerele mai mari decât 10 din lista de mai jos
-numere = [5, 12, 8, 15, 3, 20, 7]
+axes[1, 1].pie([30, 25, 20, 25])
+labels=['A', 'B', 'C', 'D',]
+autopct='%1.1f%%'
+axes[1, 1].set_title('Pie Chart')
 
-numere_mari = list(filter(lambda x: x>10, numere))
-print(numere_mari)
-
-
-# Exercițiul 4: Creați o funcție simplă care conține o funcție internă
-# Funcția principală să se numească "salut_creator"
-# Funcția internă să se numească "spune_salut" și să printeze "Bună ziua!"
-def salut_creator():
-   def spune_salut():
-        print('Buna ziua!')
-   spune_salut()
+plt.tight_layout()
+plt.show()
+plt.savefig(dpi=300,bbox_inches='tight' )
+    
    
-
-# Testare:
-salut_creator()  # Ar trebui să afișeze "Bună ziua!"
-
-
-# Exercițiul 5: CLOSURE - Creați un counter simplu
-# Funcția să returneze o funcție internă care numără de câte ori a fost apelată
-def creeaza_counter():
-    # CODUL TĂU AICI
- counter=0
- def count():
-    nonlocal counter
-    print(f'functia a fost apelata de {counter} ori')
-    counter += 1
-    return counter
- return count
-
-
-# Testare:
-counter1 = creeaza_counter()
-print(counter1())  # Ar trebui să afișeze 1
-print(counter1())  # Ar trebui să afișeze 2
-print(counter1())  # Ar trebui să afișeze 3
-
-
-# Exercițiul 6: CLOSURE - Creator de funcții de înmulțire
-# Funcția să primească un număr și să returneze o funcție care înmulțește cu acel număr
-def creeaza_inmultitor(factor):
-   return lambda x: x*factor
-
-
-
-    # CODUL TĂU AICI
- 
-
-
-inmulteste_cu_2 = creeaza_inmultitor(2)
-inmulteste_cu_5 = creeaza_inmultitor(5)
-print(inmulteste_cu_2(10))  # Ar trebui să afișeze 20 (10 * 2)
-print(inmulteste_cu_5(3))   # Ar trebui să afișeze 15 (3 * 5)
+  
+def main():
+    """Funcția principală"""
+    
+    print("📊 Matplotlib Demo")
+    print("=" * 20)
+    
+    # TODO: Apelează toate funcțiile
+    
+    print("Creez grafic cu linii...")
+    create_line_plot()
+    
+    print("Creez grafic cu bare...")
+    create_bar_plot()
+    
+    print("Creez grafic cu puncte...")
+    create_scatter_plot()
+    
+    print("Creez subplot...")
+    create_subplot()
+    
+    print("✅ Toate graficele au fost create!")
