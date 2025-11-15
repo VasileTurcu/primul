@@ -1,6 +1,9 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
+
+
+
 def create_line_plot():
     """Creează un grafic cu linii"""
     
@@ -16,8 +19,6 @@ plt.grid(True)
 plt.show()
 plt.savefig(dpi=300,bbox_inches='tight' )
 
-import matplotlib.pyplot as plt
-import numpy as np
 
 
 def create_bar_plot():
@@ -38,10 +39,6 @@ plt.savefig(dpi=300,bbox_inches='tight' )
     
 
     
-    
-    
-import matplotlib.pyplot as plt
-import numpy as np
 
 
 def create_scatter_plot():
@@ -110,3 +107,6 @@ def main():
     create_subplot()
     
     print("✅ Toate graficele au fost create!")
+    
+    if __name__ == "__main__":
+       main()
